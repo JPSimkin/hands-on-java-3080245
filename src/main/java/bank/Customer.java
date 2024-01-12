@@ -6,7 +6,7 @@ public class Customer {
   private String name;
   private String username;
   private String password;
-  private long accountId;
+  private int accountId;
 
   public Customer(int id, String name, String username, String password, int accountId) {
     setId(id);
@@ -49,11 +49,11 @@ public class Customer {
     this.password = password;
   }
 
-  public long getAccountId() {
+  public int getAccountId() {
     return this.accountId;
   }
 
-  public void setAccountId(long accountId) {
+  public void setAccountId(int accountId) {
     this.accountId = accountId;
   }
 
