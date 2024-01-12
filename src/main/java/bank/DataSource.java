@@ -55,7 +55,7 @@ public class DataSource {
       try (ResultSet resultSet = statement.executeQuery()) {
         account = new Account(resultSet.getInt("id"),
             resultSet.getString("type"),
-            resultSet.getLong("balance"));
+            resultSet.getDouble("balance"));
       }
 
     } catch (SQLException e) {
@@ -68,8 +68,8 @@ public class DataSource {
 
   public static void main(String[] args) {
     Customer customer = getCustomer("twest8o@friendfeed.com");
-    System.out.println(customer.getName());
     Account account = getAccount(customer.getAccountId());
-    System.out.println("$" + account.getBalance());
+    System.out.println(customer.getName() + " $" + account.getBalance());
+    
   }
 }
