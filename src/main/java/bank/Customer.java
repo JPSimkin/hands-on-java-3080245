@@ -6,7 +6,7 @@ public class Customer {
   private String name;
   private String username;
   private String password;
-  private int accountId;
+  private long accountId;
 
   public Customer(int id, String name, String username, String password, int accountId) {
     setId(id);
