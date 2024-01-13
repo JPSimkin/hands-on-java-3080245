@@ -67,7 +67,7 @@ public class Menu {
           System.out.println("Thank you for banking at Globe Bank International!");
           break;
         default:
-          System.out.println("Invalid option. Please try again.")
+          System.out.println("Invalid option. Please try again.");
           break;
 
       }
