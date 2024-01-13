@@ -12,7 +12,6 @@ public class Account {
 
   }
 
-
   public int getId() {
     return this.id;
   }
@@ -35,6 +34,24 @@ public class Account {
 
   public void setBalance(double balance) {
     this.balance = balance;
+  }
+
+  public void deposit(double amount) {
+    this.balance = this.balance + amount;
+
+  }
+
+  public void withdraw(double amount) {
+    if (amount < this.balance) {
+      this.balance = this.balance - amount;
+    } else if (amount == this.balance) {
+      this.balance = 0;
+    } else {
+      System.out.println("You have less than " + amount + " in your account.");
+      System.out.println("Your withdrawl cannot be made.");
+    }
+    
+
   }
 
 }
