@@ -56,7 +56,6 @@ public class Menu {
           amount = scanner.nextDouble();
           try {
             account.deposit(amount);
-            DataSource.updateAccountBalance(account.getId(), account.getBalance());
           } catch(AmountException e) {
             System.out.println(e.getMessage());
             System.out.println("Please try again.");

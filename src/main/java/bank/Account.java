@@ -42,17 +42,17 @@ public class Account {
     if (amount > 0) {
       double newBalance = balance + amount;
       setBalance(newBalance);
+      DataSource.updateAccountBalance(id, newBalance);
     } else {
       throw new AmountException("The minimum deposit is $1.00.");
     }
-    
-
   }
 
   public void withdraw(double amount) throws AmountException {
     if (amount <= this.balance) {
       double newBalance = balance - amount;
       setBalance(newBalance);
+      DataSource.updateAccountBalance(id, newBalance);
     } else {
       throw new AmountException("You have less than " + amount + " in your account. Your withdrawl cannot be made.");
     }
